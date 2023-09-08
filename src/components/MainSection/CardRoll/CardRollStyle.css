@@ -1,0 +1,8 @@
+.cardRollList{
+    display: flex;
+    overflow: hidden;
+}
+
+.cardHeading p {
+    font-size: 20px;
+}

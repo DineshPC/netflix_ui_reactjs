@@ -1,0 +1,10 @@
+.cardContainer{
+    justify-items: center;
+    margin-right: 10px;
+    display: grid;
+    cursor: pointer;
+}
+
+.movieName{
+    margin-top: -15px;
+}

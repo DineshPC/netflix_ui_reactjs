@@ -1,0 +1,16 @@
+.introContainer{
+    padding: 100px 0px 0px 0px;
+    max-width: 550px;
+    margin-bottom: 50px;
+}
+
+.introHeading{
+    font-size: 45px;
+    margin: -7px 0px;
+    font-weight: bold;
+}
+
+.introInfo{
+    font-size: 20px;
+    
+}
