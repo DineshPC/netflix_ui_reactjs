@@ -17,8 +17,10 @@
     padding: 5px 15px 5px 15px;
     margin-right: 5px;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 .navBarBtn button:hover {
-    background-color: whitesmoke;
+    background-color: rgb(195, 195, 195);
+
 }
