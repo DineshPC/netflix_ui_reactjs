@@ -10,13 +10,13 @@ export default function CardRoll(props) {
   let box = document.querySelector(a.toString());
 
   let click_previous_btn =  () => {
-    let width =  box.clientWidth
-    box.scrollLeft = box.scrollLeft - (width/1.1)
+    let width = window.innerWidth;
+    box.scrollLeft = box.scrollLeft - (width/1.1);
   }
 
   let click_next_btn = () => {
-    let width = box.clientWidth;
-    box.scrollLeft = box.scrollLeft + (width/1.1)
+    let width = window.innerWidth;
+    box.scrollLeft = box.scrollLeft + (width/1.1);
   }
 
   return (
@@ -29,16 +29,16 @@ export default function CardRoll(props) {
           <button className='next-btn' onClick={click_next_btn}>&gt;</button>
         </div>
         <div className='cardRollList' id={props.cardId}>
-            <Card name="movie1" img={img1}/>
-            <Card name="movie1" img={img1}/>
-            <Card name="movie1" img={img1}/>
-            <Card name="movie1" img={img1}/>
-            <Card name="movie1" img={img1}/>
-            <Card name="movie1" img={img1}/>
-            <Card name="movie1" img={img1}/>
-            <Card name="movie1" img={img1}/>
-            <Card name="movie1" img={img1}/>
-            <Card name="movie1" img={img1}/>
+            <Card name="movie1" img={img1}/>1
+            <Card name="movie1" img={img1}/>2
+            <Card name="movie1" img={img1}/>3
+            <Card name="movie1" img={img1}/>4
+            <Card name="movie1" img={img1}/>5
+            <Card name="movie1" img={img1}/>6
+            <Card name="movie1" img={img1}/>7
+            <Card name="movie1" img={img1}/>8
+            <Card name="movie1" img={img1}/>9
+            <Card name="movie1" img={img1}/>10
         </div>
         
     </div>
