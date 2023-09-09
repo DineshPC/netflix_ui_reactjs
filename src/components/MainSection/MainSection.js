@@ -3,7 +3,7 @@ import Intro from './Intro/Intro';
 import "./MainSectionStyle.css"
 import CardRoll from './CardRoll/CardRoll';
 
-import {genre1 , genre2} from '../../common/cardList1';
+import {genre1 , genre2, genre3, genre4} from '../../common/cardList1';
 
 export default function MainSection() {
   return (
@@ -11,6 +11,8 @@ export default function MainSection() {
       <Intro />
       <CardRoll cardItems={genre1}/>
       <CardRoll cardItems={genre2}/>
+      <CardRoll cardItems={genre3}/>
+      <CardRoll cardItems={genre4}/>
       
       {/* <CardRoll name="TV Comedies" cardId="cardID2"/>
       <CardRoll name="Bingeworthy TV Dramas" cardId="cardID3"/>

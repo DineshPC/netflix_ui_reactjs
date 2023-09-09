@@ -1,6 +1,24 @@
 .footerContainer{
     color: #ffffff;
-    display: flex;
-    justify-content: center;
     background-color: black;
+    padding: 30px 10px;
 }
+
+.footerOptions{
+    display: flex;
+}
+
+.footerOptions ul li{
+    list-style: none;
+    margin: 10px 10px ;
+}
+
+.footerOptions ul li a {
+    color: #606060;
+    text-decoration: none;
+}
+
+.footerOptions ul li a:hover{
+    color: aliceblue;
+}
+
