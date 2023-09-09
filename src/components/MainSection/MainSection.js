@@ -9,7 +9,7 @@ export default function MainSection() {
       <Intro />
       <CardRoll name="Popular on Netflix" cardId="cardID1"/>
       <CardRoll name="TV Comedies" cardId="cardID2"/>
-      <CardRoll name="Bingeworthy TV Dramas" cardId="cardID3"/>
+      <CardRoll name="Bingeworthy TV Dramas" cardId="cardID3" />
       <CardRoll name="Bingeworthy TV Dramas" cardId="cardID4"/>
     </div>
   )
