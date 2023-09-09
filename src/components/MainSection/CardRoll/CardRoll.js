@@ -6,6 +6,10 @@ import img3 from "../../../assert/king_of_land.jpg"
 import './CardRollStyle.css';
 
 export default function CardRoll(props) {
+
+  const a = props.cardItems;
+  console.log(a);
+
   const cardListRef = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -30,7 +34,7 @@ export default function CardRoll(props) {
   return (
     <div className="cardRollContainer">
       <div className="cardHeading">
-        <p className="">{props.name}</p>
+        <p className="">{props.cardItems.name}</p>
       </div>
       <div className="back-forward-btn">
         <button className="previous-btn" onClick={clickPreviousBtn}>
@@ -41,26 +45,9 @@ export default function CardRoll(props) {
         </button>
       </div>
       <div className="cardRollList" ref={cardListRef}>
-        <Card name="movie1" img={img1} />
-        <Card name="movie2" img={img2} />
-        <Card name="movie3" img={img3} />
-        <Card name="movie4" img={img1} />
-        <Card name="movie5" img={img2} />
-        <Card name="movie6" img={img3} />
-        <Card name="movie7" img={img1} />
-        <Card name="movie8" img={img2} />
-        <Card name="movie9" img={img3} />
-        <Card name="movie10" img={img1} />
-        <Card name="movie11" img={img2} />
-        <Card name="movie12" img={img3} />
-        <Card name="movie13" img={img1} />
-        <Card name="movie14" img={img2} />
-        <Card name="movie15" img={img3} />
-        <Card name="movie16" img={img1} />
-        <Card name="movie17" img={img2} />
-        <Card name="movie18" img={img3} />
-        <Card name="movie19" img={img1} />
-        <Card name="movie20" img={img2} />
+        {props.cardItems.movies.map((movie, index) => (
+          <Card key={index} name={movie.movie_name} img={movie.movie_img} />
+        ))}
       </div>
 
     </div>
