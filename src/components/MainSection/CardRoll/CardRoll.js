@@ -1,8 +1,5 @@
 import React, { useRef, useState } from 'react';
 import Card from '../Card/Card';
-import img1 from '../../../assert/lucifer.jpg';
-import img2 from '../../../assert/money_heist.jpg';
-import img3 from "../../../assert/king_of_land.jpg"
 import './CardRollStyle.css';
 
 export default function CardRoll(props) {

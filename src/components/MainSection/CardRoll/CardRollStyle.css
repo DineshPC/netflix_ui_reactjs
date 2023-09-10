@@ -22,7 +22,9 @@
     left: 2%;
     margin-top: 65px;
     border-radius: 5px;
-
+    font-size: x-large;
+    background: rgb(0,0,0,0.3); 
+    color: red;
 }
 
 .next-btn{
@@ -31,5 +33,7 @@
     right: 2%;
     margin-top: 65px;
     border-radius: 5px;
-
+    font-size: x-large;
+    background: rgb(0,0,0,0.3);
+    color: red;
 }
