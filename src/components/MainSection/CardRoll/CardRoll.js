@@ -7,18 +7,19 @@ import './CardRollStyle.css';
 
 export default function CardRoll(props) {
 
-  const a = props.cardItems;
-  console.log(a);
-
   const cardListRef = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const clickPreviousBtn = () => {
     if (cardListRef.current) {
       const width = window.innerWidth;
-      const newPosition = scrollPosition - width / 1.3;
-      cardListRef.current.scrollTo({ left: newPosition, behavior: 'smooth' });
+      var newPosition = scrollPosition - width / 1.3;
+      if(newPosition<0){
+        newPosition = 0;
+      }
+      cardListRef.current.scrollLeft = newPosition;
       setScrollPosition(newPosition);
+      console.log("pre : " + newPosition);
     }
   };
 
@@ -26,8 +27,12 @@ export default function CardRoll(props) {
     if (cardListRef.current) {
       const width = window.innerWidth;
       const newPosition = scrollPosition + width / 1.3;
-      cardListRef.current.scrollTo({ left: newPosition, behavior: 'smooth' });
+      const noOfItemsInCardRoll = document.getElementById('cardRollListID').children.length;
+      if(newPosition < 310*noOfItemsInCardRoll){
+      cardListRef.current.scrollLeft = newPosition;
       setScrollPosition(newPosition);
+      }
+      console.log("next : " + newPosition);
     }
   };
 
@@ -44,11 +49,11 @@ export default function CardRoll(props) {
           &gt;
         </button>
       </div>
-      <div className="cardRollList" ref={cardListRef}>
-        {props.cardItems.movies.map((movie, index) => (
-          <Card key={index} name={movie.movie_name} img={movie.movie_img} />
-        ))}
-      </div>
+        <div className="cardRollList" ref={cardListRef} id="cardRollListID">
+          {props.cardItems.movies.map((movie, index) => (
+            <Card key={index} name={movie.movie_name} img={movie.movie_img} />
+          ))}
+        </div>
 
     </div>
 
