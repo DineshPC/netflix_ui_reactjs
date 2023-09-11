@@ -16,7 +16,6 @@ export default function CardRoll(props) {
       }
       cardListRef.current.scrollLeft = newPosition;
       setScrollPosition(newPosition);
-      console.log("pre : " + newPosition);
     }
   };
 
@@ -29,7 +28,6 @@ export default function CardRoll(props) {
       cardListRef.current.scrollLeft = newPosition;
       setScrollPosition(newPosition);
       }
-      console.log("next : " + newPosition);
     }
   };
 
@@ -47,8 +45,8 @@ export default function CardRoll(props) {
         </button>
       </div>
         <div className="cardRollList" ref={cardListRef} id="cardRollListID">
-          {props.cardItems.movies.map((movie, index) => (
-            <Card key={index} name={movie.movie_name} img={movie.movie_img} />
+          {props.cardItems.movies.map((movie) => (
+            <Card name={movie.movie_name} img={movie.movie_img} />
           ))}
         </div>
 

@@ -2,7 +2,13 @@
     display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
+    overflow-x: scroll;
 }
+
+.cardRollList::-webkit-scrollbar {
+    overflow: scroll;
+    scrollbar-width: thin;
+  }
 
 .cardHeading p {
     font-size: 20px;

@@ -6,6 +6,7 @@
 
 .footerOptions{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .footerOptions ul li{
